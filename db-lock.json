@@ -1,0 +1,3188 @@
+{
+  "schema": [
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "facebook_detail",
+      "column_name": "access_token",
+      "column_default": null,
+      "is_nullable": "NO",
+      "data_type": "text",
+      "udt_name": "text"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "facebook_detail",
+      "column_name": "facebook_data",
+      "column_default": null,
+      "is_nullable": "NO",
+      "data_type": "text",
+      "udt_name": "text"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "facebook_detail",
+      "column_name": "facebook_id",
+      "column_default": null,
+      "is_nullable": "NO",
+      "data_type": "text",
+      "udt_name": "text"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "facebook_detail",
+      "column_name": "username",
+      "column_default": null,
+      "is_nullable": "NO",
+      "data_type": "USER-DEFINED",
+      "udt_name": "citext"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "facebook_detail",
+      "column_name": "when_added",
+      "column_default": "now()",
+      "is_nullable": "NO",
+      "data_type": "timestamp without time zone",
+      "udt_name": "timestamp"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "facebook_detail",
+      "column_name": "when_updated",
+      "column_default": "now()",
+      "is_nullable": "NO",
+      "data_type": "timestamp without time zone",
+      "udt_name": "timestamp"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "following",
+      "column_name": "follow_username",
+      "column_default": null,
+      "is_nullable": "NO",
+      "data_type": "USER-DEFINED",
+      "udt_name": "citext"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "following",
+      "column_name": "seq",
+      "column_default": "nextval('following_seq_seq'::regclass)",
+      "is_nullable": "NO",
+      "data_type": "integer",
+      "udt_name": "int4"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "following",
+      "column_name": "username",
+      "column_default": null,
+      "is_nullable": "NO",
+      "data_type": "USER-DEFINED",
+      "udt_name": "citext"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "following",
+      "column_name": "when_added",
+      "column_default": "now()",
+      "is_nullable": "NO",
+      "data_type": "timestamp without time zone",
+      "udt_name": "timestamp"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "image",
+      "column_name": "height",
+      "column_default": null,
+      "is_nullable": "YES",
+      "data_type": "integer",
+      "udt_name": "int4"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "image",
+      "column_name": "image",
+      "column_default": null,
+      "is_nullable": "NO",
+      "data_type": "bytea",
+      "udt_name": "bytea"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "image",
+      "column_name": "image_id",
+      "column_default": "uuid_generate_v1mc()",
+      "is_nullable": "NO",
+      "data_type": "uuid",
+      "udt_name": "uuid"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "image",
+      "column_name": "mimetype",
+      "column_default": null,
+      "is_nullable": "YES",
+      "data_type": "text",
+      "udt_name": "text"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "image",
+      "column_name": "name",
+      "column_default": null,
+      "is_nullable": "YES",
+      "data_type": "text",
+      "udt_name": "text"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "image",
+      "column_name": "seq",
+      "column_default": "nextval('image_seq_seq'::regclass)",
+      "is_nullable": "NO",
+      "data_type": "integer",
+      "udt_name": "int4"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "image",
+      "column_name": "when_added",
+      "column_default": "now()",
+      "is_nullable": "NO",
+      "data_type": "timestamp without time zone",
+      "udt_name": "timestamp"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "image",
+      "column_name": "when_updated",
+      "column_default": "now()",
+      "is_nullable": "NO",
+      "data_type": "timestamp without time zone",
+      "udt_name": "timestamp"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "image",
+      "column_name": "width",
+      "column_default": null,
+      "is_nullable": "YES",
+      "data_type": "integer",
+      "udt_name": "int4"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "log",
+      "column_name": "key",
+      "column_default": null,
+      "is_nullable": "NO",
+      "data_type": "text",
+      "udt_name": "text"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "log",
+      "column_name": "log",
+      "column_default": null,
+      "is_nullable": "NO",
+      "data_type": "text",
+      "udt_name": "text"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "log",
+      "column_name": "log_level",
+      "column_default": null,
+      "is_nullable": "YES",
+      "data_type": "text",
+      "udt_name": "text"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "log",
+      "column_name": "seq",
+      "column_default": "nextval('log_seq_seq'::regclass)",
+      "is_nullable": "NO",
+      "data_type": "integer",
+      "udt_name": "int4"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "log",
+      "column_name": "when_added",
+      "column_default": "now()",
+      "is_nullable": "NO",
+      "data_type": "timestamp without time zone",
+      "udt_name": "timestamp"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "person",
+      "column_name": "age",
+      "column_default": null,
+      "is_nullable": "YES",
+      "data_type": "integer",
+      "udt_name": "int4"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "person",
+      "column_name": "country",
+      "column_default": null,
+      "is_nullable": "YES",
+      "data_type": "text",
+      "udt_name": "text"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "person",
+      "column_name": "display_name",
+      "column_default": null,
+      "is_nullable": "YES",
+      "data_type": "text",
+      "udt_name": "text"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "person",
+      "column_name": "email",
+      "column_default": null,
+      "is_nullable": "YES",
+      "data_type": "USER-DEFINED",
+      "udt_name": "citext"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "person",
+      "column_name": "gender",
+      "column_default": null,
+      "is_nullable": "YES",
+      "data_type": "text",
+      "udt_name": "text"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "person",
+      "column_name": "is_active",
+      "column_default": "true",
+      "is_nullable": "NO",
+      "data_type": "boolean",
+      "udt_name": "bool"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "person",
+      "column_name": "is_admin",
+      "column_default": "false",
+      "is_nullable": "NO",
+      "data_type": "boolean",
+      "udt_name": "bool"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "person",
+      "column_name": "is_private",
+      "column_default": "false",
+      "is_nullable": "NO",
+      "data_type": "boolean",
+      "udt_name": "bool"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "person",
+      "column_name": "password_hash",
+      "column_default": null,
+      "is_nullable": "NO",
+      "data_type": "text",
+      "udt_name": "text"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "person",
+      "column_name": "username",
+      "column_default": null,
+      "is_nullable": "NO",
+      "data_type": "USER-DEFINED",
+      "udt_name": "citext"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "person",
+      "column_name": "when_added",
+      "column_default": "now()",
+      "is_nullable": "NO",
+      "data_type": "timestamp without time zone",
+      "udt_name": "timestamp"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "person",
+      "column_name": "when_updated",
+      "column_default": "now()",
+      "is_nullable": "NO",
+      "data_type": "timestamp without time zone",
+      "udt_name": "timestamp"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "person_photo",
+      "column_name": "image_id",
+      "column_default": null,
+      "is_nullable": "NO",
+      "data_type": "uuid",
+      "udt_name": "uuid"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "person_photo",
+      "column_name": "person_photo_id",
+      "column_default": "uuid_generate_v1mc()",
+      "is_nullable": "NO",
+      "data_type": "uuid",
+      "udt_name": "uuid"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "person_photo",
+      "column_name": "seq",
+      "column_default": "nextval('person_photo_seq_seq'::regclass)",
+      "is_nullable": "NO",
+      "data_type": "integer",
+      "udt_name": "int4"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "person_photo",
+      "column_name": "username",
+      "column_default": null,
+      "is_nullable": "NO",
+      "data_type": "USER-DEFINED",
+      "udt_name": "citext"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "person_photo",
+      "column_name": "when_added",
+      "column_default": "now()",
+      "is_nullable": "NO",
+      "data_type": "timestamp without time zone",
+      "udt_name": "timestamp"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "person_photo",
+      "column_name": "when_updated",
+      "column_default": "now()",
+      "is_nullable": "NO",
+      "data_type": "timestamp without time zone",
+      "udt_name": "timestamp"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post",
+      "column_name": "country_of_origin",
+      "column_default": null,
+      "is_nullable": "YES",
+      "data_type": "text",
+      "udt_name": "text"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post",
+      "column_name": "description",
+      "column_default": null,
+      "is_nullable": "YES",
+      "data_type": "text",
+      "udt_name": "text"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post",
+      "column_name": "grape_variety",
+      "column_default": null,
+      "is_nullable": "YES",
+      "data_type": "text",
+      "udt_name": "text"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post",
+      "column_name": "post_id",
+      "column_default": "uuid_generate_v1mc()",
+      "is_nullable": "NO",
+      "data_type": "uuid",
+      "udt_name": "uuid"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post",
+      "column_name": "rating",
+      "column_default": null,
+      "is_nullable": "YES",
+      "data_type": "integer",
+      "udt_name": "int4"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post",
+      "column_name": "region",
+      "column_default": null,
+      "is_nullable": "YES",
+      "data_type": "text",
+      "udt_name": "text"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post",
+      "column_name": "seq",
+      "column_default": "nextval('post_seq_seq'::regclass)",
+      "is_nullable": "NO",
+      "data_type": "integer",
+      "udt_name": "int4"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post",
+      "column_name": "username",
+      "column_default": null,
+      "is_nullable": "NO",
+      "data_type": "USER-DEFINED",
+      "udt_name": "citext"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post",
+      "column_name": "vineyard",
+      "column_default": null,
+      "is_nullable": "YES",
+      "data_type": "text",
+      "udt_name": "text"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post",
+      "column_name": "vintage",
+      "column_default": null,
+      "is_nullable": "YES",
+      "data_type": "integer",
+      "udt_name": "int4"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post",
+      "column_name": "visibility",
+      "column_default": "'public'::text",
+      "is_nullable": "NO",
+      "data_type": "text",
+      "udt_name": "text"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post",
+      "column_name": "when_added",
+      "column_default": "now()",
+      "is_nullable": "NO",
+      "data_type": "timestamp without time zone",
+      "udt_name": "timestamp"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post",
+      "column_name": "when_updated",
+      "column_default": "now()",
+      "is_nullable": "NO",
+      "data_type": "timestamp without time zone",
+      "udt_name": "timestamp"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post",
+      "column_name": "wine_type",
+      "column_default": null,
+      "is_nullable": "YES",
+      "data_type": "text",
+      "udt_name": "text"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_barcode",
+      "column_name": "barcode",
+      "column_default": null,
+      "is_nullable": "NO",
+      "data_type": "text",
+      "udt_name": "text"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_barcode",
+      "column_name": "barcode_type",
+      "column_default": null,
+      "is_nullable": "NO",
+      "data_type": "text",
+      "udt_name": "text"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_barcode",
+      "column_name": "image_id",
+      "column_default": null,
+      "is_nullable": "NO",
+      "data_type": "uuid",
+      "udt_name": "uuid"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_barcode",
+      "column_name": "post_id",
+      "column_default": null,
+      "is_nullable": "NO",
+      "data_type": "uuid",
+      "udt_name": "uuid"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_barcode",
+      "column_name": "seq",
+      "column_default": "nextval('post_barcode_seq_seq'::regclass)",
+      "is_nullable": "NO",
+      "data_type": "integer",
+      "udt_name": "int4"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_barcode",
+      "column_name": "when_added",
+      "column_default": "now()",
+      "is_nullable": "NO",
+      "data_type": "timestamp without time zone",
+      "udt_name": "timestamp"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_comment",
+      "column_name": "comment_text",
+      "column_default": null,
+      "is_nullable": "NO",
+      "data_type": "text",
+      "udt_name": "text"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_comment",
+      "column_name": "post_id",
+      "column_default": null,
+      "is_nullable": "NO",
+      "data_type": "uuid",
+      "udt_name": "uuid"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_comment",
+      "column_name": "seq",
+      "column_default": "nextval('post_comment_seq_seq'::regclass)",
+      "is_nullable": "NO",
+      "data_type": "integer",
+      "udt_name": "int4"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_comment",
+      "column_name": "username",
+      "column_default": null,
+      "is_nullable": "NO",
+      "data_type": "USER-DEFINED",
+      "udt_name": "citext"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_comment",
+      "column_name": "when_added",
+      "column_default": "now()",
+      "is_nullable": "NO",
+      "data_type": "timestamp without time zone",
+      "udt_name": "timestamp"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_comment",
+      "column_name": "when_updated",
+      "column_default": "now()",
+      "is_nullable": "NO",
+      "data_type": "timestamp without time zone",
+      "udt_name": "timestamp"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_image",
+      "column_name": "image_id",
+      "column_default": null,
+      "is_nullable": "NO",
+      "data_type": "uuid",
+      "udt_name": "uuid"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_image",
+      "column_name": "info",
+      "column_default": null,
+      "is_nullable": "YES",
+      "data_type": "text",
+      "udt_name": "text"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_image",
+      "column_name": "post_id",
+      "column_default": null,
+      "is_nullable": "NO",
+      "data_type": "uuid",
+      "udt_name": "uuid"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_image",
+      "column_name": "seq",
+      "column_default": "nextval('post_image_seq_seq'::regclass)",
+      "is_nullable": "NO",
+      "data_type": "integer",
+      "udt_name": "int4"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_image",
+      "column_name": "show_order",
+      "column_default": null,
+      "is_nullable": "NO",
+      "data_type": "integer",
+      "udt_name": "int4"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_image",
+      "column_name": "when_added",
+      "column_default": "now()",
+      "is_nullable": "NO",
+      "data_type": "timestamp without time zone",
+      "udt_name": "timestamp"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_image",
+      "column_name": "when_updated",
+      "column_default": "now()",
+      "is_nullable": "NO",
+      "data_type": "timestamp without time zone",
+      "udt_name": "timestamp"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_like",
+      "column_name": "post_id",
+      "column_default": null,
+      "is_nullable": "NO",
+      "data_type": "uuid",
+      "udt_name": "uuid"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_like",
+      "column_name": "seq",
+      "column_default": "nextval('post_like_seq_seq'::regclass)",
+      "is_nullable": "NO",
+      "data_type": "integer",
+      "udt_name": "int4"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_like",
+      "column_name": "username",
+      "column_default": null,
+      "is_nullable": "NO",
+      "data_type": "USER-DEFINED",
+      "udt_name": "citext"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_like",
+      "column_name": "when_added",
+      "column_default": "now()",
+      "is_nullable": "NO",
+      "data_type": "timestamp without time zone",
+      "udt_name": "timestamp"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_like",
+      "column_name": "when_updated",
+      "column_default": "now()",
+      "is_nullable": "NO",
+      "data_type": "timestamp without time zone",
+      "udt_name": "timestamp"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_share",
+      "column_name": "post_id",
+      "column_default": null,
+      "is_nullable": "NO",
+      "data_type": "uuid",
+      "udt_name": "uuid"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_share",
+      "column_name": "seq",
+      "column_default": "nextval('post_share_seq_seq'::regclass)",
+      "is_nullable": "NO",
+      "data_type": "integer",
+      "udt_name": "int4"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_share",
+      "column_name": "username",
+      "column_default": null,
+      "is_nullable": "NO",
+      "data_type": "USER-DEFINED",
+      "udt_name": "citext"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_share",
+      "column_name": "when_added",
+      "column_default": "now()",
+      "is_nullable": "NO",
+      "data_type": "timestamp without time zone",
+      "udt_name": "timestamp"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_share",
+      "column_name": "when_updated",
+      "column_default": "now()",
+      "is_nullable": "NO",
+      "data_type": "timestamp without time zone",
+      "udt_name": "timestamp"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "push_notification",
+      "column_name": "push_id",
+      "column_default": null,
+      "is_nullable": "NO",
+      "data_type": "text",
+      "udt_name": "text"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "push_notification",
+      "column_name": "session_id",
+      "column_default": null,
+      "is_nullable": "NO",
+      "data_type": "uuid",
+      "udt_name": "uuid"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "push_notification",
+      "column_name": "username",
+      "column_default": null,
+      "is_nullable": "NO",
+      "data_type": "USER-DEFINED",
+      "udt_name": "citext"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "push_notification",
+      "column_name": "when_added",
+      "column_default": "now()",
+      "is_nullable": "NO",
+      "data_type": "timestamp without time zone",
+      "udt_name": "timestamp"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "reset_code",
+      "column_name": "reset_code",
+      "column_default": null,
+      "is_nullable": "NO",
+      "data_type": "text",
+      "udt_name": "text"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "reset_code",
+      "column_name": "seq",
+      "column_default": "nextval('reset_code_seq_seq'::regclass)",
+      "is_nullable": "NO",
+      "data_type": "integer",
+      "udt_name": "int4"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "reset_code",
+      "column_name": "used",
+      "column_default": "false",
+      "is_nullable": "NO",
+      "data_type": "boolean",
+      "udt_name": "bool"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "reset_code",
+      "column_name": "username",
+      "column_default": null,
+      "is_nullable": "NO",
+      "data_type": "USER-DEFINED",
+      "udt_name": "citext"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "reset_code",
+      "column_name": "when_added",
+      "column_default": "now()",
+      "is_nullable": "NO",
+      "data_type": "timestamp without time zone",
+      "udt_name": "timestamp"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "reset_code",
+      "column_name": "when_updated",
+      "column_default": "now()",
+      "is_nullable": "NO",
+      "data_type": "timestamp without time zone",
+      "udt_name": "timestamp"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "session",
+      "column_name": "ipaddress",
+      "column_default": null,
+      "is_nullable": "NO",
+      "data_type": "text",
+      "udt_name": "text"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "session",
+      "column_name": "os",
+      "column_default": null,
+      "is_nullable": "NO",
+      "data_type": "text",
+      "udt_name": "text"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "session",
+      "column_name": "session_id",
+      "column_default": "uuid_generate_v1mc()",
+      "is_nullable": "NO",
+      "data_type": "uuid",
+      "udt_name": "uuid"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "session",
+      "column_name": "username",
+      "column_default": null,
+      "is_nullable": "NO",
+      "data_type": "USER-DEFINED",
+      "udt_name": "citext"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "session",
+      "column_name": "when_added",
+      "column_default": "now()",
+      "is_nullable": "NO",
+      "data_type": "timestamp without time zone",
+      "udt_name": "timestamp"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "session",
+      "column_name": "when_expire",
+      "column_default": null,
+      "is_nullable": "YES",
+      "data_type": "timestamp without time zone",
+      "udt_name": "timestamp"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "session",
+      "column_name": "when_updated",
+      "column_default": "now()",
+      "is_nullable": "NO",
+      "data_type": "timestamp without time zone",
+      "udt_name": "timestamp"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "wishlist",
+      "column_name": "post_id",
+      "column_default": null,
+      "is_nullable": "NO",
+      "data_type": "uuid",
+      "udt_name": "uuid"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "wishlist",
+      "column_name": "seq",
+      "column_default": "nextval('wishlist_seq_seq'::regclass)",
+      "is_nullable": "NO",
+      "data_type": "integer",
+      "udt_name": "int4"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "wishlist",
+      "column_name": "username",
+      "column_default": null,
+      "is_nullable": "NO",
+      "data_type": "USER-DEFINED",
+      "udt_name": "citext"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "wishlist",
+      "column_name": "when_added",
+      "column_default": "now()",
+      "is_nullable": "NO",
+      "data_type": "timestamp without time zone",
+      "udt_name": "timestamp"
+    },
+    {
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "wishlist",
+      "column_name": "when_updated",
+      "column_default": "now()",
+      "is_nullable": "NO",
+      "data_type": "timestamp without time zone",
+      "udt_name": "timestamp"
+    }
+  ],
+  "roles": [
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "facebook_detail",
+      "privilege_type": "DELETE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "facebook_detail",
+      "privilege_type": "INSERT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "facebook_detail",
+      "privilege_type": "REFERENCES",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "facebook_detail",
+      "privilege_type": "SELECT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "facebook_detail",
+      "privilege_type": "TRIGGER",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "facebook_detail",
+      "privilege_type": "TRUNCATE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "facebook_detail",
+      "privilege_type": "UPDATE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "following",
+      "privilege_type": "DELETE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "following",
+      "privilege_type": "INSERT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "following",
+      "privilege_type": "REFERENCES",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "following",
+      "privilege_type": "SELECT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "following",
+      "privilege_type": "TRIGGER",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "following",
+      "privilege_type": "TRUNCATE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "following",
+      "privilege_type": "UPDATE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "image",
+      "privilege_type": "DELETE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "image",
+      "privilege_type": "INSERT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "image",
+      "privilege_type": "REFERENCES",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "image",
+      "privilege_type": "SELECT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "image",
+      "privilege_type": "TRIGGER",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "image",
+      "privilege_type": "TRUNCATE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "image",
+      "privilege_type": "UPDATE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "log",
+      "privilege_type": "DELETE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "log",
+      "privilege_type": "INSERT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "log",
+      "privilege_type": "REFERENCES",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "log",
+      "privilege_type": "SELECT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "log",
+      "privilege_type": "TRIGGER",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "log",
+      "privilege_type": "TRUNCATE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "log",
+      "privilege_type": "UPDATE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "person",
+      "privilege_type": "DELETE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "person",
+      "privilege_type": "INSERT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "person",
+      "privilege_type": "REFERENCES",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "person",
+      "privilege_type": "SELECT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "person",
+      "privilege_type": "TRIGGER",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "person",
+      "privilege_type": "TRUNCATE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "person",
+      "privilege_type": "UPDATE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "person_photo",
+      "privilege_type": "DELETE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "person_photo",
+      "privilege_type": "INSERT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "person_photo",
+      "privilege_type": "REFERENCES",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "person_photo",
+      "privilege_type": "SELECT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "person_photo",
+      "privilege_type": "TRIGGER",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "person_photo",
+      "privilege_type": "TRUNCATE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "person_photo",
+      "privilege_type": "UPDATE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post",
+      "privilege_type": "DELETE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post",
+      "privilege_type": "INSERT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post",
+      "privilege_type": "REFERENCES",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post",
+      "privilege_type": "SELECT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post",
+      "privilege_type": "TRIGGER",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post",
+      "privilege_type": "TRUNCATE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post",
+      "privilege_type": "UPDATE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_barcode",
+      "privilege_type": "DELETE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_barcode",
+      "privilege_type": "INSERT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_barcode",
+      "privilege_type": "REFERENCES",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_barcode",
+      "privilege_type": "SELECT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_barcode",
+      "privilege_type": "TRIGGER",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_barcode",
+      "privilege_type": "TRUNCATE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_barcode",
+      "privilege_type": "UPDATE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_comment",
+      "privilege_type": "DELETE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_comment",
+      "privilege_type": "INSERT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_comment",
+      "privilege_type": "REFERENCES",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_comment",
+      "privilege_type": "SELECT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_comment",
+      "privilege_type": "TRIGGER",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_comment",
+      "privilege_type": "TRUNCATE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_comment",
+      "privilege_type": "UPDATE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_image",
+      "privilege_type": "DELETE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_image",
+      "privilege_type": "INSERT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_image",
+      "privilege_type": "REFERENCES",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_image",
+      "privilege_type": "SELECT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_image",
+      "privilege_type": "TRIGGER",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_image",
+      "privilege_type": "TRUNCATE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_image",
+      "privilege_type": "UPDATE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_like",
+      "privilege_type": "DELETE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_like",
+      "privilege_type": "INSERT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_like",
+      "privilege_type": "REFERENCES",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_like",
+      "privilege_type": "SELECT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_like",
+      "privilege_type": "TRIGGER",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_like",
+      "privilege_type": "TRUNCATE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_like",
+      "privilege_type": "UPDATE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_share",
+      "privilege_type": "DELETE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_share",
+      "privilege_type": "INSERT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_share",
+      "privilege_type": "REFERENCES",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_share",
+      "privilege_type": "SELECT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_share",
+      "privilege_type": "TRIGGER",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_share",
+      "privilege_type": "TRUNCATE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_share",
+      "privilege_type": "UPDATE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "push_notification",
+      "privilege_type": "DELETE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "push_notification",
+      "privilege_type": "INSERT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "push_notification",
+      "privilege_type": "REFERENCES",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "push_notification",
+      "privilege_type": "SELECT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "push_notification",
+      "privilege_type": "TRIGGER",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "push_notification",
+      "privilege_type": "TRUNCATE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "push_notification",
+      "privilege_type": "UPDATE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "reset_code",
+      "privilege_type": "DELETE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "reset_code",
+      "privilege_type": "INSERT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "reset_code",
+      "privilege_type": "REFERENCES",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "reset_code",
+      "privilege_type": "SELECT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "reset_code",
+      "privilege_type": "TRIGGER",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "reset_code",
+      "privilege_type": "TRUNCATE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "reset_code",
+      "privilege_type": "UPDATE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "session",
+      "privilege_type": "DELETE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "session",
+      "privilege_type": "INSERT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "session",
+      "privilege_type": "REFERENCES",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "session",
+      "privilege_type": "SELECT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "session",
+      "privilege_type": "TRIGGER",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "session",
+      "privilege_type": "TRUNCATE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "session",
+      "privilege_type": "UPDATE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "wishlist",
+      "privilege_type": "DELETE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "wishlist",
+      "privilege_type": "INSERT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "wishlist",
+      "privilege_type": "REFERENCES",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "wishlist",
+      "privilege_type": "SELECT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "wishlist",
+      "privilege_type": "TRIGGER",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "wishlist",
+      "privilege_type": "TRUNCATE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "admin_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "wishlist",
+      "privilege_type": "UPDATE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "facebook_detail",
+      "privilege_type": "DELETE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "facebook_detail",
+      "privilege_type": "INSERT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "facebook_detail",
+      "privilege_type": "REFERENCES",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "facebook_detail",
+      "privilege_type": "SELECT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "facebook_detail",
+      "privilege_type": "TRIGGER",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "facebook_detail",
+      "privilege_type": "TRUNCATE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "facebook_detail",
+      "privilege_type": "UPDATE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "following",
+      "privilege_type": "DELETE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "following",
+      "privilege_type": "INSERT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "following",
+      "privilege_type": "REFERENCES",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "following",
+      "privilege_type": "SELECT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "following",
+      "privilege_type": "TRIGGER",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "following",
+      "privilege_type": "TRUNCATE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "following",
+      "privilege_type": "UPDATE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "image",
+      "privilege_type": "DELETE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "image",
+      "privilege_type": "INSERT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "image",
+      "privilege_type": "REFERENCES",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "image",
+      "privilege_type": "SELECT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "image",
+      "privilege_type": "TRIGGER",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "image",
+      "privilege_type": "TRUNCATE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "image",
+      "privilege_type": "UPDATE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "log",
+      "privilege_type": "DELETE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "log",
+      "privilege_type": "INSERT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "log",
+      "privilege_type": "REFERENCES",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "log",
+      "privilege_type": "SELECT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "log",
+      "privilege_type": "TRIGGER",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "log",
+      "privilege_type": "TRUNCATE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "log",
+      "privilege_type": "UPDATE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "person",
+      "privilege_type": "DELETE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "person",
+      "privilege_type": "INSERT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "person",
+      "privilege_type": "REFERENCES",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "person",
+      "privilege_type": "SELECT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "person",
+      "privilege_type": "TRIGGER",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "person",
+      "privilege_type": "TRUNCATE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "person",
+      "privilege_type": "UPDATE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "person_photo",
+      "privilege_type": "DELETE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "person_photo",
+      "privilege_type": "INSERT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "person_photo",
+      "privilege_type": "REFERENCES",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "person_photo",
+      "privilege_type": "SELECT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "person_photo",
+      "privilege_type": "TRIGGER",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "person_photo",
+      "privilege_type": "TRUNCATE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "person_photo",
+      "privilege_type": "UPDATE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post",
+      "privilege_type": "DELETE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post",
+      "privilege_type": "INSERT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post",
+      "privilege_type": "REFERENCES",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post",
+      "privilege_type": "SELECT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post",
+      "privilege_type": "TRIGGER",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post",
+      "privilege_type": "TRUNCATE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post",
+      "privilege_type": "UPDATE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_barcode",
+      "privilege_type": "DELETE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_barcode",
+      "privilege_type": "INSERT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_barcode",
+      "privilege_type": "REFERENCES",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_barcode",
+      "privilege_type": "SELECT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_barcode",
+      "privilege_type": "TRIGGER",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_barcode",
+      "privilege_type": "TRUNCATE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_barcode",
+      "privilege_type": "UPDATE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_comment",
+      "privilege_type": "DELETE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_comment",
+      "privilege_type": "INSERT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_comment",
+      "privilege_type": "REFERENCES",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_comment",
+      "privilege_type": "SELECT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_comment",
+      "privilege_type": "TRIGGER",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_comment",
+      "privilege_type": "TRUNCATE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_comment",
+      "privilege_type": "UPDATE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_image",
+      "privilege_type": "DELETE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_image",
+      "privilege_type": "INSERT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_image",
+      "privilege_type": "REFERENCES",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_image",
+      "privilege_type": "SELECT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_image",
+      "privilege_type": "TRIGGER",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_image",
+      "privilege_type": "TRUNCATE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_image",
+      "privilege_type": "UPDATE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_like",
+      "privilege_type": "DELETE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_like",
+      "privilege_type": "INSERT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_like",
+      "privilege_type": "REFERENCES",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_like",
+      "privilege_type": "SELECT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_like",
+      "privilege_type": "TRIGGER",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_like",
+      "privilege_type": "TRUNCATE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_like",
+      "privilege_type": "UPDATE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_share",
+      "privilege_type": "DELETE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_share",
+      "privilege_type": "INSERT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_share",
+      "privilege_type": "REFERENCES",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_share",
+      "privilege_type": "SELECT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_share",
+      "privilege_type": "TRIGGER",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_share",
+      "privilege_type": "TRUNCATE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_share",
+      "privilege_type": "UPDATE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "push_notification",
+      "privilege_type": "DELETE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "push_notification",
+      "privilege_type": "INSERT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "push_notification",
+      "privilege_type": "REFERENCES",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "push_notification",
+      "privilege_type": "SELECT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "push_notification",
+      "privilege_type": "TRIGGER",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "push_notification",
+      "privilege_type": "TRUNCATE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "push_notification",
+      "privilege_type": "UPDATE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "reset_code",
+      "privilege_type": "DELETE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "reset_code",
+      "privilege_type": "INSERT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "reset_code",
+      "privilege_type": "REFERENCES",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "reset_code",
+      "privilege_type": "SELECT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "reset_code",
+      "privilege_type": "TRIGGER",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "reset_code",
+      "privilege_type": "TRUNCATE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "reset_code",
+      "privilege_type": "UPDATE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "session",
+      "privilege_type": "DELETE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "session",
+      "privilege_type": "INSERT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "session",
+      "privilege_type": "REFERENCES",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "session",
+      "privilege_type": "SELECT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "session",
+      "privilege_type": "TRIGGER",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "session",
+      "privilege_type": "TRUNCATE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "session",
+      "privilege_type": "UPDATE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "wishlist",
+      "privilege_type": "DELETE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "wishlist",
+      "privilege_type": "INSERT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "wishlist",
+      "privilege_type": "REFERENCES",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "wishlist",
+      "privilege_type": "SELECT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "wishlist",
+      "privilege_type": "TRIGGER",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "wishlist",
+      "privilege_type": "TRUNCATE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "docker",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "wishlist",
+      "privilege_type": "UPDATE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "regular_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "facebook_detail",
+      "privilege_type": "INSERT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "regular_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "facebook_detail",
+      "privilege_type": "SELECT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "regular_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "following",
+      "privilege_type": "DELETE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "regular_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "following",
+      "privilege_type": "INSERT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "regular_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "following",
+      "privilege_type": "SELECT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "regular_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "image",
+      "privilege_type": "INSERT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "regular_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "image",
+      "privilege_type": "SELECT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "regular_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "log",
+      "privilege_type": "INSERT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "regular_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "person",
+      "privilege_type": "INSERT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "regular_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "person",
+      "privilege_type": "SELECT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "regular_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "person",
+      "privilege_type": "UPDATE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "regular_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "person_photo",
+      "privilege_type": "INSERT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "regular_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "person_photo",
+      "privilege_type": "SELECT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "regular_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post",
+      "privilege_type": "INSERT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "regular_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post",
+      "privilege_type": "SELECT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "regular_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_barcode",
+      "privilege_type": "INSERT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "regular_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_barcode",
+      "privilege_type": "SELECT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "regular_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_comment",
+      "privilege_type": "DELETE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "regular_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_comment",
+      "privilege_type": "INSERT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "regular_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_comment",
+      "privilege_type": "SELECT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "regular_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_image",
+      "privilege_type": "INSERT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "regular_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_image",
+      "privilege_type": "SELECT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "regular_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_like",
+      "privilege_type": "DELETE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "regular_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_like",
+      "privilege_type": "INSERT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "regular_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_like",
+      "privilege_type": "SELECT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "regular_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_share",
+      "privilege_type": "DELETE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "regular_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_share",
+      "privilege_type": "INSERT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "regular_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "post_share",
+      "privilege_type": "SELECT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "regular_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "push_notification",
+      "privilege_type": "DELETE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "regular_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "push_notification",
+      "privilege_type": "INSERT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "regular_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "push_notification",
+      "privilege_type": "SELECT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "regular_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "reset_code",
+      "privilege_type": "INSERT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "regular_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "reset_code",
+      "privilege_type": "SELECT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "regular_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "reset_code",
+      "privilege_type": "UPDATE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "regular_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "session",
+      "privilege_type": "DELETE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "regular_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "session",
+      "privilege_type": "INSERT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "regular_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "session",
+      "privilege_type": "SELECT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "regular_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "wishlist",
+      "privilege_type": "DELETE",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "regular_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "wishlist",
+      "privilege_type": "INSERT",
+      "grantor": "docker"
+    },
+    {
+      "grantee": "regular_user",
+      "table_catalog": "toast",
+      "table_schema": "public",
+      "table_name": "wishlist",
+      "privilege_type": "SELECT",
+      "grantor": "docker"
+    }
+  ]
+}
