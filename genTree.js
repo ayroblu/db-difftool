@@ -9,37 +9,147 @@ const pgSystemSchemas = ['pg_catalog', 'information_schema']
 class Schema {
   async getSchema(){
     const schema = await knex.select().from('information_schema.columns').whereNotIn('table_schema', pgSystemSchemas)
-    const groupedSchema = groupSchema(schema)
+      .orderBy('table_catalog').orderBy('table_schema').orderBy('table_name').orderBy('ordinal_position')
+    const groupedSchema = this._groupSchema(schema)
     // first, group by table_catalog, then table_schema, table_name, column_name, (maybe order by ordinal position)
     // Params are, column_default, is_nullable, data_type
     // NOTE: udt_name seems more appropriate?
-    const roles = await knex.select().from('information_schema.role_table_grants').whereNotIn('table_schema', pgSystemSchemas)
-    const groupedRoles = groupRoles(roles)
 
-    return {schema: groupedSchema, roles: groupedRoles}
+    const roles = await knex.select().from('information_schema.role_table_grants').whereNotIn('table_schema', pgSystemSchemas)
+      .orderBy('grantee').orderBy('table_catalog').orderBy('table_schema').orderBy('table_name').orderBy('privilege_type')
+    const groupedRoles = this._groupRoles(roles)
+
+    const constraints = await knex.select('c.*', 't.constraint_type').from('information_schema.constraint_column_usage as c')
+      .join('information_schema.table_constraints as t', {
+        'c.table_catalog': 't.table_catalog', 'c.table_schema': 't.table_schema'
+      , 'c.table_name':'t.table_name', 'c.constraint_name': 't.constraint_name'
+      })
+      .whereNotIn('t.table_schema', pgSystemSchemas)
+      .whereNot('t.constraint_type', 'CHECK')
+
+    this._mergeConstraints(groupedSchema, constraints)
+
+    const sequences = await knex.select().from('information_schema.sequences').whereNotIn('sequence_schema', pgSystemSchemas)
+    const groupedSequences = this._groupSequences(sequences)
+
+    return {schema: groupedSchema, roles: groupedRoles, sequences: groupedSequences}
   }
-  groupAsObject(arr, keys, getFinal){
+  _groupAsObject(arr, keys, getFinal){
     const key = keys.slice(0, 1)
     const newKeys = keys.slice(1)
     return arr.reduce((a,n)=>{
       if (newKeys.length){
         if (!a[n[key]]){
           const newArr = arr.filter(r=>r[key] === n[key])
-          a[n[key]] = groupAsObject(newArr, newKeys, getFinal)
+          a[n[key]] = this._groupAsObject(newArr, newKeys, getFinal)
         }
       } else {
-        a[n[key]] = getFinal(n)
+        const newArr = arr.filter(r=>r[key] === n[key])
+        a[n[key]] = getFinal(n, newArr)
       }
       return a
     }, {})
   }
-  groupSchema(schema){
-    let groupedSchema = groupAsObject(schema, ['table_catalog', 'table_schema', 'table_name', 'column_name'], row=>_.pick(row, ['column_default', 'is_nullable', 'data_type', 'udt_name']))
+  _groupSchema(schema){
+    let groupedSchema = this._groupAsObject(schema, ['table_catalog', 'table_schema', 'table_name']
+    //, row=>_.pick(row, ['column_default', 'is_nullable', 'data_type', 'udt_name']))
+    , (row, arr)=>arr.map(a=>_.pick(a, ['column_name', 'column_default', 'is_nullable', 'data_type', 'udt_name'])))
     return groupedSchema
   }
-  groupRoles(schema){
-    let groupedSchema = groupAsObject(schema, ['grantee', 'table_catalog', 'table_schema', 'table_name'], row=>_.pick(row, ['privilege_type', 'grantor']))
+  _groupRoles(schema){
+    let groupedSchema = this._groupAsObject(schema, ['grantee', 'table_catalog', 'table_schema', 'table_name']
+    //, (row, arr)=>arr.map(a=>_.pick(a, ['privilege_type', 'grantor'])))
+    , (row, arr)=>arr.map(a=>a.privilege_type))
     return groupedSchema
+  }
+  _groupSequences(sequences){
+    let groupedSequences = this._groupAsObject(sequences, ['sequence_catalog', 'sequence_schema', 'sequence_name']
+    , (row, arr)=>arr.map(a=>_.pick(a, [
+        'data_type', 'numeric_precision', 'numeric_precision_radix', 'numeric_scale'
+      , 'start_value', 'minimum_value', 'maximum_value', 'increment', 'cycle_option'
+      ])))
+    return groupedSequences
+  }
+  _mergeConstraints(db, constraints){
+    constraints.forEach(c=>{
+      const {table_catalog, table_schema, table_name, column_name, constraint_name, constraint_type} = c
+      const columns = db[table_catalog][table_schema][table_name]
+      const column = columns.find(c=>c.column_name===column_name)
+      if (!column.constraints){
+        column.constraints = []
+      }
+      column.constraints.push({constraint_name, constraint_type})
+    })
+    //let groupedSchema = this._groupAsObject(schema, ['table_catalog', 'table_schema', 'table_name', 'column_name']
+    //, (row, arr)=>arr.map(a=>_.pick(a, ['constraint_name', 'constraint_type'])))
+  }
+}
+const kn = require('knex')({client: 'pg'})
+class CommandGenerator {
+  _generateCreateTables(db){
+    Object.keys(db).forEach(table_catalog=>{
+      const database = db[table_catalog]
+      Object.keys(database).forEach(table_schema=>{
+        const schema = database[table_schema]
+        Object.keys(schema).forEach(table_name=>{
+          const table = schema[table_name]
+          const self = this
+          const ct = kn.schema.withSchema(table_schema).createTable(table_name, function (tb) {
+            table.forEach(col=>{
+              let tableCol = self._makeColumn(col, tb, table_name)
+              tableCol = self._makeColumnNull(col, tableCol, table_name)
+              tableCol = self._makeColumnDefault(col, tableCol, table_name)
+            })
+          }).toString()
+          console.log(ct)
+        })
+      })
+    })
+  }
+  _makeColumnDefault(col, tableCol, tableName){
+    if (col.column_default){
+      tableCol.defaultTo(col.column_default)
+    }
+    return tableCol
+  }
+  _makeColumnNull(col, tableCol, tableName){
+    if (col.constraints && col.constraints.find(c=>c.constraint_type==='PRIMARY KEY')){
+      return tableCol
+    }
+    if (col.is_nullable === 'NO'){
+      return tableCol.notNullable()
+    }
+    return tableCol
+  }
+  _makeColumn(col, tb, tableName){
+    const colName = col.column_name
+    switch(col.udt_name){
+      case 'citext':
+        return tb.specificType(colName, 'citext')
+      case 'int4':
+        //if (col.column_default) console.log('col', `nextval('${tableName}_${colName}_seq'::regclass)`, 'def', col.column_default)
+        if (col.column_default && `nextval('${tableName}_${colName}_seq'::regclass)` === col.column_default){
+          if (col.constraints && col.constraints.find(c=>c.constraint_type==='PRIMARY KEY')){
+            return tb.increments(colName)
+          } else {
+            return tb.specificType(colName, 'serial')
+          }
+        }
+        return tb.integer(colName)
+      case 'bool':
+        return tb.boolean(colName)
+      case 'uuid':
+        return tb.uuid(colName)
+      case 'bytea':
+        return tb.specificType(colName, 'bytea')
+        return //tb.bytea(colName)
+      case 'timestamp':
+        return tb.timestamp(colName, true)
+      case 'timestamptz':
+        return tb.timestamp(colName)
+      case 'text':
+        return tb.text(colName)
+    }
   }
 }
 async function run(){
@@ -47,7 +157,11 @@ async function run(){
   const db = await schema.getSchema()
   const dbString = JSON.stringify(db, null, 2)
   fs.writeFileSync('db-lock.json', dbString)
-  console.log(`Done, num schema: ${schema.length}, num roles: ${roles.length}`)
+  //console.log(`Done, num schema: ${schema.length}, num roles: ${roles.length}`)
+
+  const generator = new CommandGenerator()
+  generator._generateCreateTables(db.schema)
+
   process.exit()
 }
 run().catch(err=>{
