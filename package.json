@@ -10,6 +10,6 @@
     "db-difftool" : "./bin.js"
   },
   "scripts": {
-    "start": "node genTree.js"
+    "start": "node index.js"
   }
 }
