@@ -30,16 +30,19 @@ const config = {
 }
 switch (commands[0]){
   case 'gen':
-    genDb(config).catch(err=>{
+    genDb(config).then(res=>{
+      process.exit()
+    }).catch(err=>{
       console.error('Error running', err)
     })
-    process.exit()
   case 'read':
-    diffDb(config).catch(err=>{
+    diffDb(config).then(res=>{
+      process.exit()
+    }).catch(err=>{
       console.error('Error running', err)
     })
-    process.exit()
   default:
+    console.error('  Command not recognised')
     process.exit(1)
 }
 

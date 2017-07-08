@@ -12,8 +12,6 @@ async function run(config){
 
   const generator = new CommandGenerator()
   generator.generateCreateTables(db.schema)
-
-  process.exit()
 }
 async function runRead(config){
   const schema = new Schema(config)
@@ -22,8 +20,6 @@ async function runRead(config){
   const savedDb = require('./db-lock.json')
   const differ = new Differ()
   differ.diff(db, savedDb)
-
-  process.exit()
 }
 
 module.exports = {

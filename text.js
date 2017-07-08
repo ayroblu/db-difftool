@@ -1,5 +1,4 @@
 const help = `
-
   Usage: db-difftool [command] [options]
 
 
@@ -18,7 +17,6 @@ const help = `
     -p, --port               database server port (default: "5432")
     -U, --username           database user name
     -P, --password           database password
-
 `
 const tooMany = `
   Sorry you've provided too many commands
