@@ -5,6 +5,7 @@ const help = `
   Commands:
     
     gen [options] generates a lock file
+    read [options] compares database with lock file
 
   Options:
 
@@ -18,6 +19,11 @@ const help = `
     -U, --user               database user name
     -P, --password           database password
     -d, --database           database name
+
+  Example:
+
+    $ db-difftool gen -H localhost -p 5432 -U username -P password -d dbname
+    $ db-difftool read -H localhost -p 5432 -U username -P password -d dbname
 `
 const tooMany = `
   Sorry you've provided too many commands
