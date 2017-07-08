@@ -42,7 +42,8 @@ switch (commands[0]){
       console.error('Error running', err)
     })
   default:
-    console.error('  Command not recognised')
+    console.log('args', process.argv, 'minimist:', options)
+    console.error(`  Command not recognised: ${commands[0]}`)
     process.exit(1)
 }
 
