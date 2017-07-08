@@ -3,8 +3,8 @@ const Schema = require('./Schema')
 const Differ = require('./Differ')
 const CommandGenerator = require('./CommandGenerator')
 
-async function run(){
-  const schema = new Schema()
+async function run(config){
+  const schema = new Schema(config)
   const db = await schema.getSchema()
 
   const dbString = JSON.stringify(db, null, 2)
@@ -15,8 +15,8 @@ async function run(){
 
   process.exit()
 }
-async function runRead(){
-  const schema = new Schema()
+async function runRead(config){
+  const schema = new Schema(config)
   const db = await schema.getSchema()
 
   const savedDb = require('./db-lock.json')

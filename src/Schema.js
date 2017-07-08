@@ -1,11 +1,13 @@
-const config = require('./config')
-
-const knex = require('knex')(config)
+const knexConfig = require('knex')
 const _ = require('lodash')
 
 const pgSystemSchemas = ['pg_catalog', 'information_schema']
+let knex = null
 
 class Schema {
+  constructor(config){
+    knex = knexConfig(config)
+  }
   async getSchema(){
     const schema = await knex.select().from('information_schema.columns').whereNotIn('table_schema', pgSystemSchemas)
       .orderBy('table_catalog').orderBy('table_schema').orderBy('table_name').orderBy('ordinal_position')

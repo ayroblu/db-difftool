@@ -4,10 +4,11 @@
   "dependencies": {
     "knex": "^0.13.0",
     "lodash": "^4.17.4",
+    "minimist": "^1.2.0",
     "pg": "^6.3.0"
   },
-  "bin" : {
-    "db-difftool" : "./bin.js"
+  "bin": {
+    "db-difftool": "./bin.js"
   },
   "scripts": {
     "start": "node index.js"
