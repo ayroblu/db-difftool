@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 var options = require('minimist')(process.argv.slice(2))
-var {run, runRead} = require('./src')
+var {genDb, diffDb} = require('./src')
 var {help, tooMany} = require('./text')
 var _ = require('lodash')
 
@@ -30,12 +30,12 @@ const config = {
 }
 switch (commands[0]){
   case 'gen':
-    run(config).catch(err=>{
+    genDb(config).catch(err=>{
       console.error('Error running', err)
     })
     process.exit()
   case 'read':
-    runRead(config).catch(err=>{
+    diffDb(config).catch(err=>{
       console.error('Error running', err)
     })
     process.exit()
