@@ -24,25 +24,29 @@ const config = {
 , connection: {
     host: options.H || options.host
   , port: options.p || options.port
-  , username: options.U || options.username
+  , user: options.U || options.user
   , password: options.P || options.password
+  , database: options.d || options.database
   }
 }
 switch (commands[0]){
   case 'gen':
     genDb(config).then(res=>{
+      console.log('Gen complete')
       process.exit()
     }).catch(err=>{
       console.error('Error running', err)
     })
+    break
   case 'read':
     diffDb(config).then(res=>{
+      console.log('Diff complete')
       process.exit()
     }).catch(err=>{
       console.error('Error running', err)
     })
+    break
   default:
-    console.log('args', process.argv, 'minimist:', options)
     console.error(`  Command not recognised: ${commands[0]}`)
     process.exit(1)
 }

@@ -15,8 +15,9 @@ const help = `
 
     -H, --host               database server host or socket directory (default: "/var/run/postgresql")
     -p, --port               database server port (default: "5432")
-    -U, --username           database user name
+    -U, --user               database user name
     -P, --password           database password
+    -d, --database           database name
 `
 const tooMany = `
   Sorry you've provided too many commands
