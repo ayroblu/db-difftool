@@ -240,9 +240,12 @@ async function runRead(){
 
   process.exit()
 }
-run().catch(err=>{
-  console.error('Error running', err)
-})
+module.exports = {
+  run, runRead
+}
+//run().catch(err=>{
+//  console.error('Error running', err)
+//})
 //runRead().catch(err=>{
 //  console.error('Error running', err)
 //})
