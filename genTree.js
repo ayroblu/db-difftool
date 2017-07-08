@@ -86,7 +86,7 @@ class Schema {
 }
 const kn = require('knex')({client: 'pg'})
 class CommandGenerator {
-  _generateCreateTables(db){
+  generateCreateTables(db){
     Object.keys(db).forEach(table_catalog=>{
       const database = db[table_catalog]
       Object.keys(database).forEach(table_schema=>{
@@ -226,7 +226,7 @@ async function run(){
   fs.writeFileSync('db-lock.json', dbString)
 
   const generator = new CommandGenerator()
-  generator._generateCreateTables(db.schema)
+  generator.generateCreateTables(db.schema)
 
   process.exit()
 }
@@ -240,9 +240,9 @@ async function runRead(){
 
   process.exit()
 }
-//run().catch(err=>{
-//  console.error('Error running', err)
-//})
-runRead().catch(err=>{
+run().catch(err=>{
   console.error('Error running', err)
 })
+//runRead().catch(err=>{
+//  console.error('Error running', err)
+//})
